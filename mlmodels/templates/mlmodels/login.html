@@ -1,0 +1,29 @@
+{% extends 'mlmodels/header.html' %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+	<h1>This is for notesharing</h1>
+
+
+
+<div class="col-sm-6">
+				<div class="">
+					<div class="text-danger text-center">Login Form</div><hr>
+					<div class="card-body">
+						
+							<!-- {{form.as_p}} -->
+							<form action="" method="POST">
+								{% csrf_token %}
+								  <input type="text" name="username" placeholder="enter username" class="form-control my-2">
+								  <input type="password" name="password" placeholder="enter password" class="form-control my-2">
+								  
+								  <input type="submit" class="btn btn-danger" value="login">
+								</form>
+							
+					
+					</div>
+				</div>
+</div>
+
+
+{% endblock %}
