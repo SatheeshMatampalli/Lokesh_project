@@ -8,7 +8,7 @@
 	<h2 class="text-center">MachineLearning types</h2>
 	<br>
 	<br>
-	<form method="post" id="indexForm" data-courses-url="{% url 'ajax_load_courses' %}">
+	<form method="POST" id="indexForm" data-courses-url="{% url 'ajax_load_courses' %}">
 		{% csrf_token %}
 		<select name="programming" id="programming" class="form-control">
 			<option value="">---select type---</option>

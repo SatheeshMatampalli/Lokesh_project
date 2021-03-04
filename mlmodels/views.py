@@ -9,9 +9,10 @@ def home(req):
 	return render(req,'mlmodels/home.html')
 
 def index(req):
+	if req.method=="POST":
+		print(req.POST['programming'])
+		print(req.POST['courses'])
 	data=MLtypes.objects.all()
-	print("hi")
-	print(data)
 	return render(req,'mlmodels/index.html',{'data':data})
 
 def load_courses(req):
