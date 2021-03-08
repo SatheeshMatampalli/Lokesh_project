@@ -10,8 +10,9 @@ def home(req):
 
 def index(req):
 	if req.method=="POST":
-		print(req.POST['programming'])
-		print(req.POST['courses'])
+		ml=req.POST['programming']
+		mlm=req.POST['courses']
+		return render(req,'mlmodels/uploadcsv.html')
 	data=MLtypes.objects.all()
 	return render(req,'mlmodels/index.html',{'data':data})
 
